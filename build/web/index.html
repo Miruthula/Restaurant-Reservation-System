@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Bamboo Indian Cuisine</title>
+        <link rel="icon" type="image/png" href="Images/favicon-16x16.png" sizes="16x16" />
+        <link rel="stylesheet" type="text/css" href="Style.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+       <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><img src="Images/Bamboo.png" alt="Logo"></a>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+          
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#Aboutus">About Us</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reservation
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#Reservation">New Reservation</a></li>
+            <li><a href="#Edit" onclick="$('#Edit').toggle();">Edit / Cancel /Status Reservation</a></li>
+            
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#ownerlogin" data-toggle="modal" data-target="#ownerlogin">Owner Login</a></li>       
+      </ul>
+    </div>
+  </div>
+</nav>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="Images/5.jpg" alt=" Bamboo Indian Cuisine" width="200" height="400"/>
+        <div class="carousel-caption">
+          <h3>Bamboo Indian Cuisine</h3>
+          <p>Good Food... Good Feelings</p>
+        </div>      
+      </div>
+
+      <div class="item">
+       <img src="Images/Restaurant.jpg" alt=" Bamboo Indian Cuisine" width="8000" height="200">
+        <div class="carousel-caption">
+            
+           <h3>Bamboo Indian Cuisine</h3>
+          <p>Good Food... Good Feelings</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+          <img src="Images/res.jpg" alt="Bamboo Indian Cuisine" width="8000" height="500"/>
+        
+        <div class="carousel-caption">
+           <h3>Bamboo Indian Cuisine</h3>
+          <p>Good Food... Good Feelings</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+ <div id="Aboutus" class="container text-center">
+  <h3>About Us</h3>
+  <h4>Bamboo Indian Cuisine</h4>
+  <p>We cordially invite you to our restaurant Bamboo Indian Cuisine. It combines tradition with modernity in an exceptional way. 
+      Its interior is unique because fragments of old walls have been preserved and they have been ingeniously blended with the modern decor.
+        To ensure that each guest receives prompt, professional, friendly and courteous service.
+        To maintain a clean, comfortable and well maintained premises for our guests and staff. 
+        To provide at a fair price - nutritional, well-prepared meals - using only quality ingredients.
+        To ensure that all guests and staff are treated with the respect and dignity they deserve. 
+        To thank each guest for the opportunity to serve them. 
+        By maintaining these objectives we shall be assured of a fair profit that will allow us to contribute to the community we serve.</p>
+  <p>Our online restaurant reservation system provide robust system to clearly indicate your status of the bookings.</p>
+  <br>
+  <img src="Images/sign.png" alt="Bamboo indian Suisine" height="250" width="250"/>
+  <br>
+  </div>
+        
+        
+ <div id="Reservation" class="container text-center">
+   <h4>Bamboo Indian Cuisine</h4>
+   <h3>Reservation</h3>
+  <p>Please fill out the below details for reserving a table</p>  
+  <br>
+  <input class="form-control" id="Email" name="email" placeholder="Email" type="email" required>
+  <br>
+  <input class="form-control" id="Date" name="date"  type="date" required>
+  <br>
+  <input class="form-control" id="Time" name="time"  type="time" required>
+  <br>
+  <input class="form-control" id="PartySize" name="Party Size" placeholder="Party Size" type="number" required>
+  <br>
+  <input class="form-control" id="Phone" name="phone" placeholder="Phone Number" type="tel" required>
+  <br>
+  <button class="btn pull-right" type="submit" data-toggle="modal" data-target="#myModal">Reserve</button>
+  <br>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title">Confirmation</h4>
+        </div>
+        <div class="modal-body">
+            <p>Thank you for your reservation!!Your reservation is Confirmed.<br>                
+                Your confirmation code for the reservation is <br><h3>B234yg$</h3>
+                <br> Please not down the above code for enquiring anything regarding the reservation.
+          An email is been sent as well with the confirmation code
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+        
+ <div id="Edit" class="container text-center" style="display: none">
+  <h4>Bamboo Indian Cuisine</h4>
+   <h3>Edit/ Cancel Reservation</h3>
+   <p>Please enter your confirmation code below</p>
+   <br>
+  <input class="form-control" id="code" name="code" placeholder="Please enter the Confirmation Code" type="text" required>
+  <br>
+  <div class="btn-toolbar">
+  <button class="btn pull-right" type="submit" data-toggle="modal" data-target="#myModalcancel">Cancel Reservation</button>
+  <button class="btn pull-right" type="submit" onclick="$('#editdetails').toggle();">Edit Reservation</button>
+  <button class="btn pull-right" type="submit" data-toggle="modal" data-target="#myModalstatus">Status</button>
+  </div>
+    <div class="modal fade" id="myModalcancel" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title">Cancel Reservation</h4>
+        </div>
+        <div class="modal-body">
+            <p>Are you sure you want to cancel the reservation??<br>                
+                Your confirmation code for the reservation is <br><h3>B234yg$</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ok</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Don't Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="myModalstatus" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title">Status</h4>
+        </div>
+        <div class="modal-body">
+            <p>Your reservation for the code<br> B234yg$<br> 
+                is
+            <h3>Confirmed!</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ok</button>
+         </div>
+      </div>
+      
+    </div>
+  </div>
+  <div id="editdetails" class="container text-center" style="display: none">
+  <p>Please Edit the below details of your reservation </p>  
+  <br>
+ <form>
+  <input class="form-control" id="Email" name="email" value="rahul@gmail.com" type="email" required>
+  <br>
+  <input class="form-control" id="Date" name="date" value="2016-01-01" type="date" required>
+  <br>
+  <input class="form-control" id="Time" name="time" value="16:00"  type="time" required>
+  <br>
+  <input class="form-control" id="PartySize" name="Party Size" value="10" type="number" required>
+  <br>
+  <input class="form-control" id="Phone" name="phone" value="8523691470" type="tel" required>
+  <br>
+  <div class="btn-toolbar">
+  <button class="btn pull-right" type="submit">Submit Values</button>
+  <button class="btn pull-right" type="reset">Reset Values</button>
+  </div>
+ </form>
+  <br>
+  </div>
+  </div>  
+        
+ <div class="modal fade" id="ownerlogin" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title">Owner Login</h4>
+        </div>
+          <form method="post" action="Owner.html">
+        <div class="modal-body">
+            <p>Please enter the username and password for the owner login</p>               
+            <br>
+            <input class="form-control" id="username" name="username" placeholder="Username" type="text" required>
+                <br>
+                <input class="form-control" id="pwd" name="pwd" placeholder="password" type="password" required>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+          <button type="submit" class="btn btn-default">Signin</button>
+        </div>
+          </form>
+      </div>
+      
+    </div>
+  </div>
+        
+        
+<div id="contact" class="container">
+  <h3 class="text-center">Contact Us</h3>
+    <div class="row">
+    <div class="col-md-4">
+        <p><span class="glyphicon glyphicon-home"></span> 56,Skyline Avenue</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Charlotte, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> Phone: +1 9523689750</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> Email: mail@mail.com</p>	   
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>	
+    </div>
+  </div>
+  <br>
+  </div>
+  
+  
+    </body>
+</html>

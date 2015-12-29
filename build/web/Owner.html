@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Bamboo Indian Cuisine</title>
+        <link rel="icon" type="image/png" href="Images/favicon-16x16.png" sizes="16x16" />
+        <link rel="stylesheet" type="text/css" href="Style.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body id="owner" data-spy="scroll" data-target=".navbar" data-offset="50">
+       <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><img src="Images/Bamboo.png" alt="Logo"></a>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+          
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#owner">Welcome Peter!</a></li>
+        <li><a href="#Reservation">Reservation</a></li>
+        <li><a href="#editres" onclick="$('#editres').toggle();">Profile</a></li>  
+        <li><a href="#settings" onclick="$('#settings').toggle();">Settings</a></li> 
+        <li><a href="#contactlist" onclick="$('#contactlist').toggle();">Contact List</a></li>
+        <li><a href="index.html">Signout</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- reservation -->
+<div id="Reservation" style="padding-top: 50px; font: monotype corosiva" class="container text-center">
+  <h2>Reservations</h2>
+  <br>
+  <div class="row slideanim">
+      <a href="#list" onclick="$('#list').toggle();">
+    <div class="col-sm-4">
+        <span class="glyphicon glyphicon-list-alt logo-small"></span>
+      <h4>List all Reservations</h4>
+      </div>
+      </a>
+      <a href="#create" onclick="$('#create').toggle();">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-plus logo-small"></span>
+      <h4>Create Reservation</h4>
+      
+    </div>
+      </a>
+      <a href="#edit" onclick="$('#edit').toggle();">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-edit logo-small"></span>
+      <h4>Edit Reservation</h4>
+     
+    </div>
+      </a>
+  </div>
+  <br><br>
+  
+  <div class="row slideanim">
+      <a href="#assign" onclick="$('#assign').toggle();">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-share logo-small"></span>
+      <h4>Assign Table</h4>
+     
+    </div>
+  </a>
+      
+<!--    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-share-alt logo-small"></span>
+      <h4>Change Table</h4>
+     
+    </div>-->
+      </a>
+      <a href="#seating" onclick="$('#seating').toggle();">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-cutlery logo-small"></span>
+      <h4 style="color:#303030;">Seating Area</h4>
+    
+    </div>
+      </a>
+  </div>
+</div>
+
+
+<!--List of all reservations-->
+<div id="list" class="container text-center" style="display: none;">
+<div class="container">
+    <h4>List of all Reservations</h4>
+    <br>
+    <table class="table table-reflow table-hover" style="overflow-wrap: break-word;"> 
+    <thead>
+      <tr>
+        <th>Confirmation Code</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td ><a href="#listdetails" data-toggle="modal" data-target="#listdetails">B234jkh@</a></td>
+        
+      </tr>
+      <tr>
+         <td><a href="#listdetails" data-toggle="modal" data-target="#listdetails">B234jhd&</a></td>
+        
+      </tr>
+      <tr>
+        <td><a href="#listdetails" data-toggle="modal" data-target="#listdetails">B234yt%</a></td>
+       
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+    <div class="modal fade" id="listdetails" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title">Reservation Details</h4>
+        </div>
+          <form method="post" action="#assign">
+        <div class="modal-body">
+             <table class="table table-reflow">
+    <thead>
+      <tr>
+        <th>Confirmation Code</th>
+        <th>Size</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>B234jkh@</td>
+        <td>5</td>
+        <td>Confirmed</td>
+        <td>2016-01-26</td>
+        <td>5:00 PM</td>
+      </tr>
+      </tbody>
+  </table>
+            <button type="submit" class="btn btn-default">Assign Table</button>
+        </div>
+                           </form>
+
+        <div class="modal-footer">
+          
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+         
+      </div>
+      
+    </div>
+  </div>
+<!--Seating Area-->
+<div id="seating" class="container text-center" style="display: none;">
+<div class="container">
+    <h4>Seating Assignment</h4>
+    <br>
+    <table class="table table-reflow">
+    <thead>
+      <tr>
+        <th>Table #</th>
+        <th>Confirmation Code</th>
+        <th>Size</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>B234jkh@</td>
+        <td>5</td>
+        <td>Confirmed</td>
+        <td>2016-01-26</td>
+        <td>5:00 PM</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>B234jkh@</td>
+        <td>7</td>
+        <td>Confirmed</td>
+        <td>2016-01-20</td>
+        <td>5:00 PM</td>
+      </tr>
+      </tbody>
+  </table>
+</div>
+</div>
+
+<!--create reservation-->
+<div id="create" class="container text-center" style="display: none;">
+   <h4>Bamboo Indian Cuisine</h4>
+   <h3>Reservation</h3>
+  <p>Please fill out the below details for reserving a table</p>  
+  <br>
+  <input class="form-control" id="Email" name="email" placeholder="Email" type="email" required>
+  <br>
+  <input class="form-control" id="Date" name="date"  type="date" required>
+  <br>
+  <input class="form-control" id="Time" name="time"  type="time" required>
+  <br>
+  <input class="form-control" id="PartySize" name="Party Size" placeholder="Party Size" type="number" required>
+  <br>
+  <input class="form-control" id="Phone" name="phone" placeholder="Phone Number" type="tel" required>
+  <br>
+  <button class="btn pull-right" type="submit" data-toggle="modal" data-target="#myModal">Reserve</button>
+  <br>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title">Confirmation</h4>
+        </div>
+        <div class="modal-body">
+            <p>Thank you for your reservation!!Your reservation is Confirmed.<br>                
+                Your confirmation code for the reservation is <br><h3>B234yg$</h3>
+                <br> Please not down the above code for enquiring anything regarding the reservation.
+          An email is been sent as well with the confirmation code
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+
+<!--Edit reservation-->
+ <div id="edit" class="container text-center" style="display: none">
+  <h4>Bamboo Indian Cuisine</h4>
+   <h3>Edit/ Cancel Reservation</h3>
+   <p>Please enter your confirmation code below</p>
+   <br>
+  <input class="form-control" id="code" name="code" placeholder="Please enter the Confirmation Code" type="text" required>
+  <br>
+  <div class="btn-toolbar">
+  <button class="btn pull-right" type="submit" data-toggle="modal" data-target="#myModalcancel">Cancel Reservation</button>
+  <button class="btn pull-right" type="submit" onclick="$('#editdetails').toggle();">Edit Reservation</button>
+  <button class="btn pull-right" type="submit" data-toggle="modal" data-target="#myModalstatus">Status</button>
+  </div>
+    <div class="modal fade" id="myModalcancel" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title">Cancel Reservation</h4>
+        </div>
+        <div class="modal-body">
+            <p>Are you sure you want to cancel the reservation??<br>                
+                Your confirmation code for the reservation is <br><h3>B234yg$</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ok</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Don't Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="myModalstatus" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title">Status</h4>
+        </div>
+        <div class="modal-body">
+            <p>Your reservation for the code<br> B234yg$<br> 
+                is
+            <h3>Confirmed!</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ok</button>
+         </div>
+      </div>
+      
+    </div>
+  </div>
+  <div id="editdetails" class="container text-center" style="display: none">
+  <p>Please Edit the below details of your reservation </p>  
+  <br>
+ <form>
+  <input class="form-control" id="Email" name="email" value="rahul@gmail.com" type="email" required>
+  <br>
+  <input class="form-control" id="Date" name="date" value="2016-01-01" type="date" required>
+  <br>
+  <input class="form-control" id="Time" name="time" value="16:00"  type="time" required>
+  <br>
+  <input class="form-control" id="PartySize" name="Party Size" value="10" type="number" required>
+  <br>
+  <input class="form-control" id="Phone" name="phone" value="8523691470" type="tel" required>
+  <br>
+  <div class="btn-toolbar">
+  <button class="btn pull-right" type="submit">Submit Values</button>
+  <button class="btn pull-right" type="reset">Reset Values</button>
+  </div>
+ </form>
+  <br>
+  </div>
+  </div> 
+
+<!--Edit restaurant profile-->
+ <div id="editres" class="container text-center" style="display: none">
+  <h4>Bamboo Indian Cuisine</h4>
+   <h3>Edit restaurant profile</h3>
+   <form>
+   <input class="form-control" id="name" name="name" value="Bamboo Indian Cuisine" type="text" required>
+  <br>    
+  <input class="form-control" id="Email" name="email" value="rahul@gmail.com" type="email" required>
+  <br>
+   <input class="form-control" id="Phone" name="phone" value="8523691470" type="tel" required>
+  <br>  
+  <input class="form-control" id="address" name="address" value="56,Skyline Avenue,Charlotte-Nc-28262"  type="text" required>
+  <br>
+  <div class="btn-toolbar">
+  <button class="btn pull-right" type="submit">Submit Values</button>
+  <button class="btn pull-right" type="reset">Reset Values</button>
+  </div>
+ </form>
+ </div>
+
+<!--settings-->
+ <div id="settings" class="container text-center" style="display: none">
+  <h4>Bamboo Indian Cuisine</h4>
+   <h3>Edit restaurant settings</h3>
+   <form style="text-align: left;">
+   <div class="checkbox">
+      <label><input type="checkbox" value="">   Auto Assign</label>
+    </div>
+    <p>Please enter the restaurant closing timing</p>   
+   <input class="form-control" id="Date" name="date"  type="week" required>
+  <br>
+  <label>Monday - Start time </label>
+   <input class="form-control" style="width: 100px" id="start1" name="time" type="time" required> 
+   <label>End time </label>
+   <input class="form-control" style="width: 100px" id="end1" name="time"  type="time" required>
+  <br>
+   <label>Tuesday - Start time </label>
+   <input class="form-control" style="width: 100px" id="start1" name="time" type="time" required> 
+   <label>End time </label>
+   <input class="form-control" style="width: 100px" id="end1" name="time"  type="time" required>
+  <br>
+   <label>Wednesday - Start time </label>
+   <input class="form-control" style="width: 100px" id="start1" name="time" type="time" required> 
+   <label>End time </label>
+   <input class="form-control" style="width: 100px" id="end1" name="time"  type="time" required>
+  <br>
+ <label>Thursday - Start time </label>
+   <input class="form-control" style="width: 100px" id="start1" name="time" type="time" required> 
+   <label>End time </label>
+   <input class="form-control" style="width: 100px" id="end1" name="time"  type="time" required>
+  <br>
+   <label>Friday - Start time </label>
+   <input class="form-control" style="width: 100px" id="start1" name="time" type="time" required> 
+   <label>End time </label>
+   <input class="form-control" style="width: 100px" id="end1" name="time"  type="time" required>
+  <br>
+   <label>Saturday - Start time </label>
+   <input class="form-control" style="width: 100px" id="start1" name="time" type="time" required> 
+   <label>End time </label>
+   <input class="form-control" style="width: 100px" id="end1" name="time"  type="time" required>
+  <br>
+   <label>Sunday - Start time </label>
+   <input class="form-control" style="width: 100px" id="start1" name="time" type="time" required> 
+   <label>End time </label>
+   <input class="form-control" style="width: 100px" id="end1" name="time"  type="time" required>
+  <br>
+   </form>
+  <div class="btn-toolbar">
+  <button class="btn pull-right" type="submit">Submit Values</button>
+    </div>
+ 
+ </div>
+<!--contactlist -->
+
+<div id="contactlist" class="container text-center" style="display: none;">
+<div class="container">
+    <h4>Contact List</h4>
+    <br>
+    <table class="table table-reflow">
+    <thead class="text-center">
+        <tr class="text-center">
+        <th>Customer Email</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>joe@hotmail.com</td>
+        <td>B234jkh@</td>
+        <td>B236jkh@</td>
+        <td>B123jkh@</td>
+        <td>B789jkh@</td>
+        <td>B258jkh@</td>
+      </tr>
+      <tr>
+        <td>joe@hotmail.com</td>
+        <td>B234jkh@</td>
+        <td>B236jkh@</td>
+        <td>B123jkh@</td>
+        <td>B789jkh@</td>
+        <td>B258jkh@</td>
+      </tr>
+      </tbody>
+  </table>
+</div>
+</div>
+
+<!-- Assign table -->
+<div id="assign" class="container text-center" style="display: none">
+  <h4>Bamboo Indian Cuisine</h4>
+  <h3>Assign table</h3>
+  <h2>Assigning table for reservation #- bsfg234%
+  Party Size- 16</h2>
+  <img src="Images/map.jpg" alt="Seating Map" height="500" width="700"/>
+  <select name="Table">
+    <option value="volvo">Table 1</option>
+   <option value="volvo">Table 2</option>  
+   <option value="volvo">Table 3</option>
+   <option value="volvo">Table 4</option>
+   <option value="volvo">Table 5</option>
+   <option value="volvo">Table 6</option>
+   <option value="volvo">Table 7</option>
+     <option value="volvo">Table 8</option>
+   <option value="volvo">Table 9</option>  
+   <option value="volvo">Table 10</option>
+   <option value="volvo">Table 11</option>
+   <option value="volvo">Table 12</option>
+   <option value="volvo">Table 13</option>
+   <option value="volvo">Table 14</option>
+     <option value="volvo">Table 15</option>
+   <option value="volvo">Table 16</option>  
+   <option value="volvo">Table 17</option>
+   <option value="volvo">Table 18</option>
+   <option value="volvo">Table 19</option>
+   <option value="volvo">Table 20</option>
+   <option value="volvo">Table 21</option>
+   
+   
+    </select>
+
+  <div class="btn-toolbar">
+  <button class="btn pull-right" type="submit">Assign Table</button>
+  <button class="btn pull-right" type="submit">Cancel</button>
+    </div>
+</div>
+    </body>
+</html>

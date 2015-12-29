@@ -1,0 +1,154 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 27, 2015, 1:37:55 PM
+    Author     : Miruthulavarshini
+*/
+/*body {
+    background: url(Images/6.jpg) no-repeat fixed; 
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;   
+    background-attachment: scroll;
+      
+}*/
+
+body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;   
+  }
+ 
+ .text-center h4
+ {
+     font-size: 50px;
+     color: brown;
+     font-family: cursive;
+     }
+ 
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  
+#Reservation h4
+{     font: cursive;
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+}
+#header
+{
+    margin:0;
+    padding-left: 70px;
+    font-size: 90px;
+    font-style: italic;
+    font-weight: bolder;
+    font-family:initial;
+    color: white;
+    text-align:left;
+}
+#header img
+{
+    padding-top: 10px;
+    width: 100px;
+    height:100px;
+}
+#header h6
+{
+    margin:0;
+    padding:0;
+    font-size: 20px;
+    font-style: italic;
+    text-align:center;
+    color: white;
+}
+.navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+     
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+ .navbar li a, .navbar .navbar-brand { 
+     
+      font-size: 17px;
+      font-weight: bolder;
+  }
+  .navbar-brand img
+  {
+      height: 37px;
+      width: 37px
+  }
+  .navbar-nav li a:hover {
+      color: #211AF2     !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .container-fluid
+  {
+      background-color: #9BF5AD;
+  }
+  .navbar-default .navbar-toggle {
+      background-color: lightgreen;
+      border-color: brown;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #fff !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red;
+  }
+     .carousel-inner img {
+      
+      width: 100% !important; 
+    
+      margin: auto;
+  }
+    .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+#myCarousel
+{
+    padding-top: 48px;
+}
+#footer
+{
+    color: yellow;
+    font-weight: bold;
+    clear:both;
+    float: bottom;
+    text-align:center;
+}
+.logo-small {
+      color: green;
+      font-size: 50px;
+  }
+  .table {
+    table-layout: fixed;
+    over-flow:break-word;
+}
+
